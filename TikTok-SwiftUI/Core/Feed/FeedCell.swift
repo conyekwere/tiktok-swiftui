@@ -20,7 +20,7 @@ struct FeedCell: View {
             }
             VStack{
                 Spacer()
-                HStack {
+                HStack(alignment: .bottom) {
                     VStack(alignment: .leading){
                         Text("carlos.jackson")
                             .fontWeight(.semibold)
@@ -30,34 +30,65 @@ struct FeedCell: View {
                 .font(.subheadline)
                     Spacer()
                     
-                    VStack {
+                    VStack(spacing:28) {
+                        
+                        Circle()
+                            .frame(width: 48, height: 48)
+                            .foregroundStyle(.white)
+                        
                         Button{
                             
                         } label: {
-                            Image(systemName:  "heart.fill" )
+                            VStack {
+                                Image(systemName:  "heart.fill" )
+                                    .resizable()
+                                    .frame(width: 28, height: 28)
+                                
+                                Text("27")
+                                    .font(.caption)
+                                    .bold()
+                                    
+                            }.foregroundStyle(.white)
                         }
-
-
                         Button{
 
                         } label: {
-                        Image(systemName: "ellipsis.bubble.fill" )
+                            VStack {
+                                Image(systemName: "ellipsis.bubble.fill" )
+                                    .resizable()
+                                    .frame(width: 28, height: 28)
+                                
+                                Text("27")
+                                    .font(.caption)
+                                    .bold()
+                                
+                            }.foregroundStyle(.white)
                         }
                         
                         Button{
-
                         } label: {
-                        Image(systemName: "bookmark.fill" )
+                            VStack {
+                                Image(systemName: "bookmark.fill" )
+                                    .resizable()
+                                    .frame(width: 22, height: 28)
+                                
+                                
+                            }.foregroundStyle(.white)
                         }
                         
                         Button{
 
                         } label: {
                         Image(systemName: "arrowshape.turn.up.right.fill" )
+                                .resizable()
+                                .frame(width: 28, height: 28)
+                                .foregroundStyle(.white)
                         }
                     }
-                }
+                    
+                }.padding(.bottom,80)
             }
+            .padding()
         }
     }
 }
