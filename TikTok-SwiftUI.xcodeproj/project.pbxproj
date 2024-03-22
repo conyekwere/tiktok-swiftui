@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D11BB6C2BAD456100046189 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D11BB6B2BAD456100046189 /* CurrentUserProfileView.swift */; };
+		5D11BB6E2BAD45D500046189 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D11BB6D2BAD45D500046189 /* ProfileHeaderView.swift */; };
+		5D11BB722BAD496100046189 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D11BB712BAD496100046189 /* UserStatView.swift */; };
+		5D11BB742BAD49C000046189 /* ProfileGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D11BB732BAD49C000046189 /* ProfileGridView.swift */; };
 		5D3EDAA52BABC901006F5A0B /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3EDAA42BABC901006F5A0B /* FriendView.swift */; };
 		5D3EDAA72BABC92E006F5A0B /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3EDAA62BABC92E006F5A0B /* FriendCell.swift */; };
 		5D3EDAA92BABEF2D006F5A0B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3EDAA82BABEF2D006F5A0B /* NotificationView.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D11BB6B2BAD456100046189 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
+		5D11BB6D2BAD45D500046189 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		5D11BB712BAD496100046189 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
+		5D11BB732BAD49C000046189 /* ProfileGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGridView.swift; sourceTree = "<group>"; };
 		5D3EDAA42BABC901006F5A0B /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
 		5D3EDAA62BABC92E006F5A0B /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		5D3EDAA82BABEF2D006F5A0B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
@@ -47,6 +55,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D11BB6F2BAD491B00046189 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5D11BB6D2BAD45D500046189 /* ProfileHeaderView.swift */,
+				5D11BB712BAD496100046189 /* UserStatView.swift */,
+				5D11BB732BAD49C000046189 /* ProfileGridView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5D11BB702BAD492A00046189 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D11BB6B2BAD456100046189 /* CurrentUserProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5D7C8A892BA4E80000CCF2A3 = {
 			isa = PBXGroup;
 			children = (
@@ -68,7 +94,6 @@
 			children = (
 				5D7C8AAA2BA4E85D00CCF2A3 /* App */,
 				5D7C8AA92BA4E85B00CCF2A3 /* Core */,
-				5D7C8AA82BA4E85900CCF2A3 /* Model */,
 				5D7C8AA72BA4E85500CCF2A3 /* Services */,
 				5D7C8AA42BA4E84600CCF2A3 /* Utils */,
 				5D7C8A952BA4E80000CCF2A3 /* TikTok_SwiftUIApp.swift */,
@@ -99,13 +124,6 @@
 			children = (
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		5D7C8AA82BA4E85900CCF2A3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		5D7C8AA92BA4E85B00CCF2A3 /* Core */ = {
@@ -167,6 +185,8 @@
 		5D7C8AAF2BA4F03900CCF2A3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				5D11BB702BAD492A00046189 /* View */,
+				5D11BB6F2BAD491B00046189 /* Components */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -282,13 +302,17 @@
 			files = (
 				5D3EDAA72BABC92E006F5A0B /* FriendCell.swift in Sources */,
 				5D3EDAAB2BABEF8F006F5A0B /* NotificationCell.swift in Sources */,
+				5D11BB6E2BAD45D500046189 /* ProfileHeaderView.swift in Sources */,
 				5D4FC8612BA7D31E00E32D7A /* FeedView.swift in Sources */,
 				5D4FC8632BA911FC00E32D7A /* FeedCell.swift in Sources */,
 				5D3EDAA92BABEF2D006F5A0B /* NotificationView.swift in Sources */,
 				5D7C8A982BA4E80000CCF2A3 /* ContentView.swift in Sources */,
 				5D7C8A962BA4E80000CCF2A3 /* TikTok_SwiftUIApp.swift in Sources */,
+				5D11BB6C2BAD456100046189 /* CurrentUserProfileView.swift in Sources */,
 				5D3EDAA52BABC901006F5A0B /* FriendView.swift in Sources */,
+				5D11BB742BAD49C000046189 /* ProfileGridView.swift in Sources */,
 				5D7C8AB82BA4F11000CCF2A3 /* MainTabView.swift in Sources */,
+				5D11BB722BAD496100046189 /* UserStatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
