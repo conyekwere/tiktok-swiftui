@@ -6,18 +6,15 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct FeedCell: View {
-    let post: Int
+    let post: Post
     var body: some View {
         ZStack {
-        Rectangle()
-            .fill(.pink)
-            .containerRelativeFrame([.horizontal,.vertical]) // fills in height and width full
-            .overlay{
-                Text("Post \(post)")
-                    .foregroundStyle(.white)
-            }
+            VideoPlayer(player: AVPlayer(url: URL(string: post.videoUrl)!))
+            .containerRelativeFrame([.horizontal,.vertical])
+            
             VStack{
                 Spacer()
                 HStack(alignment: .bottom) {
@@ -94,5 +91,5 @@ struct FeedCell: View {
 }
 
 #Preview {
-    FeedCell(post: 2)
+    FeedCell(post: Post(id: NSUUID().uuidString, videoUrl:"https://www.pexels.com/download/video/4057321"))
 }
