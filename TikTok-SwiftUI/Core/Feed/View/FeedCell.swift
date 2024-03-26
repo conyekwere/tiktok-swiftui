@@ -13,15 +13,14 @@ struct FeedCell: View {
     var player:AVPlayer
     
     
-    init(post:Post){
+    init(post:Post, player:AVPlayer){
         self.post = post
-        self.player  =  AVPlayer(url: URL(string: post.videoUrl)!)
+        self.player  =  player
     }
     
     var body: some View {
         ZStack {
-//            CustomVideoPlayer(player: AVPlayer(url: URL(string: post.videoUrl)!))
-                VideoPlayer(player: player)
+            CustomVideoPlayer(player: player)
                 .containerRelativeFrame([.horizontal,.vertical])
             
             VStack{
@@ -105,5 +104,5 @@ struct FeedCell: View {
 }
 
 #Preview {
-    FeedCell(post: Post(id: NSUUID().uuidString, videoUrl:"https://www.pexels.com/download/video/4057321"))
+    FeedCell(post: Post(id: NSUUID().uuidString, videoUrl:"https://www.pexels.com/download/video/4057321"),player:AVPlayer())
 }
