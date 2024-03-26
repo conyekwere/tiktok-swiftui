@@ -10,10 +10,19 @@ import AVKit
 
 struct FeedCell: View {
     let post: Post
+    var player:AVPlayer
+    
+    
+    init(post:Post){
+        self.post = post
+        self.player  =  AVPlayer(url: URL(string: post.videoUrl)!)
+    }
+    
     var body: some View {
         ZStack {
-            VideoPlayer(player: AVPlayer(url: URL(string: post.videoUrl)!))
-            .containerRelativeFrame([.horizontal,.vertical])
+//            CustomVideoPlayer(player: AVPlayer(url: URL(string: post.videoUrl)!))
+                VideoPlayer(player: player)
+                .containerRelativeFrame([.horizontal,.vertical])
             
             VStack{
                 Spacer()
@@ -37,7 +46,7 @@ struct FeedCell: View {
                             
                         } label: {
                             VStack {
-                                Image(systemName:  "heart.fill" )
+                                Image(systemName: "heart.fill" )
                                     .resizable()
                                     .frame(width: 28, height: 28)
                                 
@@ -87,6 +96,11 @@ struct FeedCell: View {
             }
             .padding()
         }
+//        .onAppear(){
+//            print("DEBUG:Post id \(post.id)")
+//           // player.play()
+//            
+//        }
     }
 }
 
